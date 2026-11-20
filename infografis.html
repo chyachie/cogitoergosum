@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portal Terpadu COGITO ERGO SUM Bawaslu Kota Administrasi Jakarta Pusat">
+<title>COGITO ERGO SUM | Portal Terpadu Bawaslu Kota Administrasi Jakarta Pusat</title>
+<style>
+:root{--navy:#102b4e;--blue:#174d7a;--gold:#d6a84f;--ink:#17283d;--muted:#65758a;--paper:#f4f7fb;--line:#e3eaf2;--white:#fff;--green:#25846a;--shadow:0 12px 34px rgba(17,45,78,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.topbar{background:#0b2039;color:#dbe7f4;font-size:12px;padding:8px max(22px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{background:var(--white);position:sticky;top:0;z-index:20;box-shadow:0 3px 18px #0b20390d}.nav{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;min-width:230px}.brandmark{width:43px;height:43px;border-radius:13px;background:linear-gradient(145deg,var(--navy),#23679b);display:grid;place-items:center;color:#fff;font-weight:900;letter-spacing:-2px;border:2px solid #e6c477;box-shadow:0 4px 12px #102b4e25}.brand strong{display:block;color:var(--navy);font-size:15px;letter-spacing:.06em}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.04em}.navlinks{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:650;color:#40536b}.navlinks a:hover{color:#b17d22}.navbtn{display:none;background:var(--navy);color:#fff;border:0;border-radius:9px;padding:9px 12px}
+.wrap{max-width:1180px;margin:auto;padding-left:22px;padding-right:22px}.hero{background:radial-gradient(circle at 85% 20%,#2e6590 0,transparent 32%),linear-gradient(115deg,#0b2039,#123c64 62%,#1c5279);color:#fff;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;width:440px;height:440px;border:1px solid #ffffff19;border-radius:50%;right:-100px;top:-160px;box-shadow:0 0 0 45px #ffffff08,0 0 0 95px #ffffff06}.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center;padding-top:72px;padding-bottom:72px}.eyebrow{color:#f0c66f;font-size:11px;letter-spacing:.17em;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.04;letter-spacing:-.045em;margin:14px 0}.hero h1 span{color:#efc56c}.hero p{max-width:620px;color:#d7e4f1;font-size:16px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid transparent;border-radius:9px;padding:11px 17px;font-weight:750;font-size:13px;cursor:pointer;transition:.2s}.btn.gold{background:var(--gold);color:#142b43}.btn.ghost{border-color:#ffffff70;color:white;background:#ffffff0b}.btn.primary{background:var(--navy);color:white}.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}.hero-card{background:#ffffff12;border:1px solid #ffffff32;border-radius:18px;padding:24px;backdrop-filter:blur(8px);box-shadow:0 20px 55px #07172a55}.hero-card .quote{font-family:Georgia,serif;font-size:29px;line-height:1.2}.hero-card .translation{color:#d3e2ef;font-size:13px;margin-top:10px}.hero-card .rule{height:1px;background:#ffffff35;margin:20px 0}.hero-card .mini{font-size:11px;color:#e6edf5;letter-spacing:.1em;text-transform:uppercase}
+.section{padding-top:64px;padding-bottom:64px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.kicker{font-size:11px;letter-spacing:.14em;color:#a57728;font-weight:850;text-transform:uppercase}.section h2{font-size:clamp(25px,3vw,34px);line-height:1.15;color:var(--navy);margin:7px 0}.section-head p{color:var(--muted);max-width:560px;margin:0;font-size:14px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-28px;position:relative;z-index:3}.stat{background:white;border:1px solid var(--line);border-radius:13px;padding:19px;box-shadow:var(--shadow)}.stat .num{font-size:27px;font-weight:850;color:var(--navy)}.stat small{color:var(--muted);font-size:12px}.stat .label{font-size:12px;color:#40536b;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tile{background:#fff;border:1px solid var(--line);border-radius:14px;padding:21px;box-shadow:0 5px 18px #102b4e08;transition:.2s}.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.tile-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:12px;background:#edf3f9;color:var(--blue);font-size:20px;margin-bottom:15px}.tile h3{font-size:16px;margin:0 0 7px;color:var(--navy)}.tile p{font-size:13px;color:var(--muted);margin:0 0 14px}.tile a{font-size:12px;font-weight:800;color:#9b6c1e}
+.band{background:#eaf0f6}.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}.panel h3{margin:0 0 15px;color:var(--navy)}.bars{display:grid;gap:14px}.barrow{display:grid;grid-template-columns:125px 1fr 36px;gap:10px;align-items:center;font-size:12px;color:#52647a}.track{height:9px;border-radius:99px;background:#eaf0f5;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#1b527e,#d6a84f);border-radius:99px}.notice{border-left:4px solid var(--gold);padding:12px 15px;background:#fff8e9;color:#6d5528;font-size:12px;border-radius:0 9px 9px 0;margin-top:15px}
+.news{display:grid;grid-template-columns:1.3fr .7fr;gap:17px}.feature{background:linear-gradient(135deg,#12395e,#1c5b83);color:#fff;border-radius:16px;padding:27px;min-height:240px;display:flex;flex-direction:column;justify-content:end}.feature .tag{font-size:10px;letter-spacing:.12em;color:#f1ca77;font-weight:800}.feature h3{font-size:25px;line-height:1.15;margin:10px 0}.feature p{color:#d5e4f0;font-size:13px;max-width:520px}.newslist{display:grid;gap:12px}.newsitem{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.newsitem small{color:#a4772a;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.newsitem h4{font-size:14px;color:var(--navy);margin:6px 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:white;border:1px solid var(--line);border-radius:13px;padding:20px}.step b{display:grid;place-items:center;width:30px;height:30px;background:#f8edda;color:#96691e;border-radius:50%;margin-bottom:12px}.step h4{margin:0 0 6px;color:var(--navy)}.step p{font-size:12px;color:var(--muted);margin:0}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:6px;font-size:12px;color:#52647a;font-weight:700}.field.full{grid-column:1/-1}.field input,.field select,.field textarea{width:100%;border:1px solid #d9e2ec;border-radius:8px;padding:10px 11px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#4c83ad;box-shadow:0 0 0 3px #4c83ad20}.field textarea{min-height:88px;resize:vertical}.result{margin-top:12px;font-size:12px;color:var(--green);font-weight:700}
+footer{background:#0b2039;color:#d5e2ee;padding:42px 0 22px}.footgrid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:25px}.footgrid h4{color:#fff;margin:0 0 10px}.footgrid p,.footgrid a{font-size:12px;color:#b6c8d9}.footlinks{display:grid;gap:7px}.copyright{border-top:1px solid #ffffff20;margin-top:28px;padding-top:17px;color:#9db2c7;font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.admin{display:none;position:fixed;inset:0;background:#07172acc;z-index:50;padding:20px;overflow:auto}.admin.open{display:grid;place-items:center}.adminbox{width:min(720px,100%);background:#fff;border-radius:16px;padding:25px;box-shadow:0 20px 70px #0005}.adminhead{display:flex;justify-content:space-between;align-items:center}.close{border:0;background:#edf2f7;border-radius:8px;padding:8px 12px;cursor:pointer}.adminbox p{color:var(--muted);font-size:13px}.adminlist{display:grid;grid-template-columns:1fr 1fr;gap:10px}.adminlist div{background:#f3f6fa;border-radius:9px;padding:12px;font-size:12px}.adminlist b{display:block;color:var(--navy);margin-bottom:3px}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:70px;left:0;right:0;background:white;padding:18px 22px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}.navlinks.show{display:flex}.navbtn{display:block}.hero-inner{grid-template-columns:1fr;padding-top:54px;padding-bottom:58px}.hero-card{max-width:500px}.stats{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.news{grid-template-columns:1fr}.footgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.section{padding-top:48px;padding-bottom:48px}.section-head{display:block}.stats{margin-top:-15px;gap:9px}.stat{padding:14px}.stat .num{font-size:22px}.grid,.split,.steps,.footgrid{grid-template-columns:1fr}.formgrid,.adminlist{grid-template-columns:1fr}.field.full{grid-column:auto}.hero h1{font-size:39px}.brand{min-width:0}.brand strong{font-size:13px}.brand small{font-size:9px}}
+
+/* Galeri infografis COGITO ERGO SUM */
+.infographic-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.infographic-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.infographic-open{position:relative;display:block;width:100%;padding:12px;border:0;background:#f7f4ed;cursor:zoom-in}
+.infographic-open img{display:block;width:100%;height:540px;object-fit:contain;border-radius:9px}
+.zoom-hint{position:absolute;right:22px;bottom:22px;background:#0b2039df;color:#fff;padding:8px 12px;border-radius:8px;font-size:11px;font-weight:750}
+.infographic-caption{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 18px}
+.infographic-caption h3{margin:5px 0;color:var(--navy);font-size:16px;line-height:1.3}
+.infographic-caption p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.infographic-caption a{flex-shrink:0;color:#94681f;font-size:12px;font-weight:800}
+.infographic-tag{color:#a57728;font-size:10px;font-weight:850;letter-spacing:.12em}
+.infographic-note{margin-top:15px;color:var(--muted);font-size:12px}
+.image-lightbox{display:none;position:fixed;inset:0;z-index:100;background:#061426f2;padding:60px 22px 22px;align-items:center;justify-content:center}
+.image-lightbox.open{display:flex}
+.image-lightbox img{max-width:min(100%,1100px);max-height:100%;object-fit:contain;box-shadow:0 15px 60px #0008}
+.lightbox-close{position:absolute;top:18px;right:22px;border:0;border-radius:50%;width:42px;height:42px;background:#fff;color:#102b4e;font-size:20px;cursor:pointer}
+@media(max-width:700px){.infographic-gallery{grid-template-columns:1fr}.infographic-open img{height:auto;max-height:72vh}.infographic-caption{align-items:flex-start;flex-direction:column}}
+
+</style>
+</head>
+<body>
+<div class="topbar"><span>BAWASLU KOTA ADMINISTRASI JAKARTA PUSAT</span><span>Portal Informasi • Edukasi • Pengawasan Partisipatif</span></div>
+<header><nav class="nav">
+<a class="brand" href="#beranda"><img src="images.jpeg" style="width: 50px; height: auto;"></img><div><strong>COGITO ERGO SUM</strong><small>PORTAL TERPADU BAWASLU JAKARTA PUSAT</small></div></a>
+<button class="navbtn" id="menuBtn" aria-label="Buka menu">☰</button>
+<div class="navlinks" id="navlinks">
+<a href="#beranda">Beranda</a><a href="infografis.html">Infografis</a><a href="#materi">Materi Pembelajaran</a><a href="#informasi">Informasi</a><a href="#pelaporan">Alur Lapor</a><a href="#komunitas">Komunitas</a><a href="#skm">Survei Kepuasan Masyarakat</a>
+</div>
+</nav></header>
+<main>
+
+<section class="section wrap" id="infografis"><div class="section-head"><div class="kicker">Infografis</div></div>
+<div>
+  <p>Kenali informasi wilayah kerja pengawasan dan indeks kerawanan Pemilu Jakarta Pusat melalui sajian visual berikut.</p>
+</div>
+<div class="infographic-gallery">
+  <article class="infographic-card">
+    <button class="infographic-open" type="button" data-full="infografisjakpus.jpeg" aria-label="Perbesar infografis Wilayah Kerja Bawaslu Kota Administrasi Jakarta Pusat">
+      <img src="infografisjakpus.jpeg" alt="Infografis Wilayah Kerja" loading="lazy">
+      <!--<span class="zoom-hint">Lihat ukuran penuh ⤢</span>-->
+    </button>
+    <div class="infographic-caption">
+      <div><span class="infographic-tag">WILAYAH KERJA</span><h3>Wilayah Kerja Bawaslu Kota Administrasi Jakarta Pusat</h3></div>
+      <a href="infografisjakpus.jpeg" download>Unduh gambar ↓</a>
+    </div>
+  </article>
+  <article class="infographic-card">
+    <button class="infographic-open" type="button" data-full="infograf2.jpeg" aria-label="Perbesar infografis Indeks Kerawanan Pemilu Jakarta Pusat">
+      <img src="infograf2.jpeg" alt="Infografis Indeks Kerawanan Pemilu Jakarta Pusat: skor 32,93 dengan kategori sedang" loading="lazy">
+      <!--<span class="zoom-hint">Lihat ukuran penuh ⤢</span>-->
+    </button>
+    <div class="infographic-caption">
+      <div><span class="infographic-tag">INDEKS KERAWANAN</span><h3>Indeks Kerawanan Pemilu (IKP) Jakarta Pusat</h3><p>Skor 32,93 • Kategori Sedang • Pemilu 2024</p></div>
+      <a href="infograf2" download>Unduh gambar ↓</a>
+    </div>
+  </article>
+  <article class="infographic-card">
+    <button class="infographic-open" type="button" data-full="infograf3.jpeg" aria-label="Perbesar infografis Wilayah Kerja Pengawasan">
+      <img src="infograf3.jpeg" alt="Infografis wilayah kerja pengawasan Bawaslu Kota Jakarta Pusat pada Pemilu 2024" loading="lazy">
+      <!--<span class="zoom-hint">Lihat ukuran penuh ⤢</span>-->
+    </button>
+    <div class="infographic-caption">
+      <div><span class="infographic-tag">WILAYAH PENGAWASAN</span><h3>Wilayah Kerja Pengawasan Bawaslu Kota Jakarta Pusat</h3><p>Data pengawas dan daftar pemilih tetap Pemilu 2024</p></div>
+      <a href="infograf3.jpeg" download>Unduh gambar ↓</a>
+    </div>
+  </article>
+</div>
+<div class="infographic-note">Pilih gambar untuk melihat tampilan lebih besar. Informasi dan angka pada infografis mengikuti materi visual yang dipublikasikan.</div>
+<div class="image-lightbox" id="infographicLightbox" role="dialog" aria-modal="true" aria-label="Pratinjau infografis">
+  <button class="lightbox-close" id="closeInfographic" type="button" aria-label="Tutup pratinjau">✕</button>
+  <img id="lightboxImage" src="" alt="Pratinjau infografis ukuran penuh">
+</div>
+</section>
+</main>
+<footer><div class="wrap"><div class="footgrid"><div><a class="brand" href="#beranda"><img src="images.jpeg" style="width: 50px; height: auto;"></img><div><strong style="color:white">COGITO ERGO SUM</strong><small style="color:#b6c8d9">BAWASLU JAKARTA PUSAT</small></div></a><p style="max-width:360px;margin-top:15px">Portal digital terpadu untuk edukasi, informasi, penyajian data, dan penguatan pengawasan partisipatif.</p></div><div><h4>Navigasi</h4><div class="footlinks"><a href="#layanan">Layanan</a><a href="#informasi">Pusat Informasi</a><a href="#infografis">Infografis</a><a href="#skm">Survei SKM</a></div></div><div><h4>Pengelolaan</h4><div class="footlinks"><a href="#" id="adminLink">Akses pengelola (demo)</a><a href="#pelaporan">Informasi alur pelaporan</a><a href="#komunitas">Komunitas</a></div></div></div>
+<div class="copyright"><span>© COGITO ERGO SUM • Bawaslu Kota Administrasi Jakarta Pusat</span></div></div></footer>
+<div class="admin" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><div class="adminbox"><div class="adminhead"><h3 id="adminTitle" style="color:var(--navy);margin:0">Dashboard Pengelola</h3><button class="close" id="closeAdmin">Tutup ✕</button></div><p>Pratinjau area admin. Autentikasi, basis data, penyimpanan dokumen, dan manajemen hak akses perlu dibangun pada backend.</p><div class="adminlist"><div><b>Manajemen konten</b>Berita, pengumuman, edukasi, dokumentasi</div><div><b>Manajemen data</b>Input data pengawasan dan indikator infografis</div><div><b>Manajemen komunitas</b>Data jejaring, kegiatan, dan materi</div><div><b>Evaluasi layanan</b>Rekap hasil SKM dan laporan evaluasi</div><div><b>Manajemen pengguna</b>Admin, operator, editor, dan verifikator</div><div><b>Audit & keamanan</b>Log aktivitas, persetujuan publikasi, backup</div></div></div></div>
+<script>
+const menuBtn=document.getElementById('menuBtn'), links=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>links.classList.toggle('show'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('show')));
+const modal=document.getElementById('adminModal');
+document.getElementById('adminLink').addEventListener('click',e=>{e.preventDefault();modal.classList.add('open')});
+document.getElementById('closeAdmin').addEventListener('click',()=>modal.classList.remove('open'));
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('open')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('open')});
+document.getElementById('skmForm').addEventListener('submit',e=>{e.preventDefault();document.getElementById('formResult').textContent='Terima kasih. Ini hanya simulasi antarmuka; tanggapan belum dikirim atau disimpan ke server.';e.target.reset()});
+
+const infographicLightbox=document.getElementById('infographicLightbox');
+const lightboxImage=document.getElementById('lightboxImage');
+document.querySelectorAll('.infographic-open').forEach(button=>{
+  button.addEventListener('click',()=>{
+    lightboxImage.src=button.dataset.full;
+    lightboxImage.alt=button.querySelector('img').alt;
+    infographicLightbox.classList.add('open');
+  });
+});
+function closeInfographicPreview(){
+  infographicLightbox.classList.remove('open');
+  lightboxImage.src='';
+}
+document.getElementById('closeInfographic').addEventListener('click',closeInfographicPreview);
+infographicLightbox.addEventListener('click',e=>{
+  if(e.target===infographicLightbox) closeInfographicPreview();
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeInfographicPreview();
+});
+
+</script>
+</body></html>
